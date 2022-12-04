@@ -1,14 +1,9 @@
-class credit{
-    public void CalculateCredit(ICreditManager iCreditManager){
-        iCreditManager.hesapla();
-    }
-    public void SaveCredit(ICreditManager iCreditManager){
-        iCreditManager.save();
-    }}
+
 public class Main {
     public static void main(String[] args) {
-        credit credit=new credit();
-        credit.CalculateCredit(new TeacherCreditManager());
+        ICreditManager iCreditManager1=new TeacherCreditManager();
+        ICreditManager iCreditManager2=new ArmyCreditManager();
+        iCreditManager2.save();
 
         CreditManager creditManager=new CreditManager();
         CustomerManager customerManager=new CustomerManager();
